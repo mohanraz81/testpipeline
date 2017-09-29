@@ -5,6 +5,7 @@
   tasks:
     - name: Create task definition
       ecs_taskdefinition:
+      region: us-east-1
       containers:
       - name: simple-app
         cpu: 1
@@ -22,6 +23,7 @@
       ecs_service:
       state: present
       name: console-test-service
+      region: us-east-1
       cluster: mycluster
       task_definition: simple-app:10
       desired_count: 3
