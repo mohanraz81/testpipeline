@@ -18,7 +18,6 @@
         family: test-cluster-taskdef
         state: present
         revision: 10
-  register: task_output
     - name: Create Service 
       ecs_service:
       state: present
